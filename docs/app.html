@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Zaplanuj Jedzonko</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+  <header class="headerApp">
+    <div class="headerApp__container">
+      <h1 class="header__logo">
+        <a href="./index.html">
+          <span class="header__logo--first">Zaplanuj</span>
+          <span class="header__logo--second">Jedzonko</span>
+        </a>
+      </h1>
+      <div class="headerApp__userbox">
+        <span id="username" class="userbox__name">sample</span>
+        <i class="userbox__icon fas fa-user"></i>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="row">
+      <div class="col-xs-12 col-md-2">
+        <aside class="navApp">
+          <ul class="navApp__menu">
+            <li class="navApp__element"><a href="app.html" class="navApp__link">Pulpit</a></li>
+            <li class="navApp__element"><a href="recipes.html" class="navApp__link">Przepisy</a></li>
+            <li class="navApp__element"><a href="schedules.html" class="navApp__link">Plany</a></li>
+          </ul>
+        </aside>
+      </div>
+      <div class="col-xs-12 col-md-10">
+        <section class="content">
+
+
+          <div id="welcome" class="welcome show">
+            <div class="welcome__firstTime">
+              <h2 class="welcome__title">Witaj,</h2>
+              <p class="welcome__description">wygląda na to, że jesteś tutaj <br> pierwszy raz</p>
+            </div>
+            <form class="welcome__form">
+              <input type="text" name="name" id="name" class="welcome__input"
+                placeholder="tutaj wpisz jak masz na imię">
+              <input id="welcome__submit" type="submit" value="Gotowe!" class="btn welcome__btn">
+            </form>
+            <div class="welcome__hint">
+              <p class="welcome__hint--title">Podaj nam swoje imię, a my zorganizujemy<br> dla Ciebie naszą aplikację
+              </p>
+            </div>
+          </div>
+
+            <div id="return" class="return ">
+              <div class="info">
+                <div class="return__container">
+                  <div id="b1" class="return__box">
+                    <i class="return__addRecipe far fa-plus-square"></i>
+                    <span class="return__title">Dodaj przepis</span>
+                  </div>
+                  <div id="b2" class="return__box">
+                    <i class="return__addSchedule far fa-plus-square"></i>
+                    <span class="return__title">Dodaj plan</span>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="schedule__con">        
+                <div class="schedule__container">
+                    <div class="days__container">
+                        <span class="corner"></span>
+                        <div class="day">Poniedziałek</div>
+                        <div class="day">Wtorek</div>
+                        <div class="day">Środa</div>
+                        <div class="day">Czwartek</div>
+                        <div class="day">Piątek</div>
+                        <div class="day">Sobota</div>
+                        <div class="day">Niedziela</div>
+                    </div>
+                    <div class="part__day">
+                        <span class="time">Śniadanie</span>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                    </div>
+                    <div class="part__day">
+                        <span class="time">Drugie Śniadanie</span>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                    </div>
+                    <div class="part__day">
+                        <span class="time">Zupa</span>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                    </div>
+                    <div class="part__day">
+                        <span class="time">Drugie Danie</span>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                    </div>
+                    <div class="part__day">
+                        <span class="time">Kolacja</span>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                        <div class="meal"></div>
+                    </div>
+                </div>
+            </div> -->
+
+          <!-- The modal box -->
+          <div id="modalRecipe" class="modal">
+            <div class="modal__box">
+              <div class="modal__content">
+                <div class="modal__header">
+                  <h3 class="modal__title">Nowy przepis</h3>
+                  <div class="modal__buttons">
+                    <button id="closeRecipe" class="btn--noTransition">Zapisz i zamknij</button>
+                    <button id="cancelRecipe" class="btn--noTransition">Anuluj</button>
+                  </div>
+                </div>
+                <div class="modal__step1">
+                  <!-- display warning if empty fields -->
+                  <div class="warning">
+                    <span class="warning__title"></span>
+                  </div>
+                  <div class="step1__box">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-3">
+                        <span class="step1__title">Nazwa przepisu</span>
+                      </div>
+                      <div class="col-xs-12 col-sm-9">
+                        <div contenteditable="true" id="recipeName" class="input__step step1__input"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step1__box">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-3">
+                        <span class="step1__title">Opis przepisu</span>
+                      </div>
+                      <div class="col-xs-12 col-sm-9">
+                        <div contenteditable="true" id="recipeDesc" class="input__step step1__input"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal__step2">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                      <div class="step2__box">
+                        <h3 class="step2__title">Instrukcje</h3>
+                        <div class="step2__add">
+                          <div contenteditable="true" id="instruction" class="input__step step2__input"></div>
+                          <i id="add__instructon" class="fas fa-plus-square"></i>
+                        </div>
+                        <ol id="instructionsList" class="step2__list step2__list--intructions">
+
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                      <div class="step2__box">
+                        <h3 class="step2__title">Składniki</h3>
+                        <div class="step2__add">
+                          <div contenteditable="true" id="ingredient" class="input__step step2__input"></div>
+                          <i id="add__ingredient" class="fas fa-plus-square"></i>
+                        </div>
+                        <ul id="ingredientsList" class="step2__list step2__list--ingredients">
+
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </section>
+      </div>
+    </div>
+  </main>
+  <script src="./js/app.js"></script>
+</body>
+</html>
