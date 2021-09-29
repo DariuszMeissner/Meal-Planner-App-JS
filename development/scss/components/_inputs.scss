@@ -4,7 +4,7 @@
 * */
 input[type='text'] {
     padding: .4rem  $space-s;
-    border: 2px solid #fff;
+    border: 2px solid transparent;
     &:focus{
         transition: 0.5;
         border: 2px solid $color-buttons-headerScreen;
