@@ -1,33 +1,40 @@
 .cta {
-    background-color: $color-sidePanel_nav;
-    padding: $space-lg;
-    &__box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: $space-s 0;
-        @include laptop { 
-            align-items: flex-start; 
-        }
-        &--center {
-            justify-content: flex-end;
-            @include laptop { 
-                align-items: center;
-                justify-content: center; 
-            }
-        }
+  background-color: $color-sidePanel_nav;
+  &__container {
+    padding: $space-md;
+  }
+  &__box {
+    display: flex;
+    margin: 0 0;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    @include laptop {
+      align-items: flex-start;
     }
-    &__title {
-        font-size: $font-size-h3;
-        color: $color-text-secondary;
-        margin-bottom: $space-sm;
-        line-height: $space-md;
+    &--text {
+      margin-bottom: $space-md;
+      @include laptop {
+        margin-bottom: 0;
+      }
     }
-    &__description {
-        // font-size: $font-size-h3;
-        color: $color-text-secondary;
+    &--btn {
+      @include laptop {
+        height: 100%;
+        align-items: flex-end;
+      }
     }
+    
+  }
+  &__title {
+    font-size: $font-size-h3;
+    color: $color-text-secondary;
+    margin-bottom: $space-sm;
+    line-height: $space-md;
+  }
+  &__description {
+    // font-size: $font-size-h3;
+    color: $color-text-secondary;
+  }
 }
-
