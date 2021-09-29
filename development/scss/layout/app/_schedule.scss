@@ -1,0 +1,78 @@
+.info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+.w1 {
+    border: 1px dashed blue;
+}
+.w2 {
+    border: 1px dashed gold;
+}
+.w3 {
+    border: 1px dashed green;
+}
+.schedule__con{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule__container{
+    border: 1px dashed lightgray;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.days__container{
+    display: flex;
+}
+
+.corner{
+    width: 50px;
+    height: 70px;
+    margin: 2px;
+}
+
+.day{
+    width: 100px;
+    border-top: 1px solid black;
+    color: $color-jedzonko;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.part__day{
+    display: flex;
+}
+
+.time{
+    width: 50px;
+    height: 70px;
+    color:$color-jedzonko;
+    background-color: #103783;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 2px;
+}
+
+.meal{
+    border-top: 1px solid black;
+    height: 70px;
+    width: 100px;
+    margin: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}

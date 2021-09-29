@@ -1,0 +1,134 @@
+@keyframes sliderAnimation {
+  0% {
+   opacity:0
+  }
+  40%{
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.carousel {
+  &__box {
+    display: none;
+    flex-direction: column;
+  }
+  &__item {
+    //height section
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    animation: sliderAnimation 3s  ease;
+    animation-iteration-count: 1;
+    &--1 {
+      align-items: center;
+      background-image: url("../../../images/slider1.jpg");
+      background-position: right;
+      @include tablet {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &--2 {
+      align-items: center;
+      background-image: url("../../../images/slider2.jpg");
+      background-position: center;
+      @include tablet {
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+    &--3 {
+      align-items: flex-end;
+      background-image: url("../../../images/slider3.jpg");
+      background-position: center;
+      @include tablet {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-bg-screen;
+    width: 100vw;
+    padding: $space-lg;
+    transition: 0.5s;
+    animation: sliderAnimation 3s  ease;
+    animation-iteration-count: 1;
+    &--1 {
+      @include tablet {
+      }
+    }
+    &--2 {
+      height: 100vh;
+      background-color: $color-white_alpha;
+    }
+    &--3 {
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: $color-bg-screen;
+      backdrop-filter: blur(5px);
+    }
+  }
+  &__title {
+    font-size: $font-size-h2;
+    font-weight: $medium;
+    line-height: 3rem;
+    text-align: center;
+  }
+  &__description {
+    font-size: $font-size-subtitle;
+    padding: $space-xs;
+    margin-top: $space-s;
+    margin-bottom: $space-lg;
+  }
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  font-size: 1rem;
+  padding: $space-xs $space-s;
+  transition: 0.6sease;
+  border-radius: 50%;
+  user-select: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  margin-left: 0;
+  @include tablet {
+    margin-left: $space-lg;
+    font-size: 1.6rem;
+  }
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  margin-right: 0;
+  @include tablet {
+    margin-right: $space-lg;
+  }
+}
+
+/*On hover,add a white background color*/
+.prev:hover,
+.next:hover {
+  color: #000;
+  background-color: #fff;
+}

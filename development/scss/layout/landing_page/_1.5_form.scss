@@ -1,0 +1,17 @@
+.form {
+  background-color: $color-sidePanel_nav;
+  &__container {
+    padding: $space-lg;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: $space-md;
+  }
+  &__title {
+    color: $color-text-secondary;
+    font-size: $font-size-h3;
+    margin-bottom: $space-sm;
+  }
+}

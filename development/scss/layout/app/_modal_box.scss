@@ -1,0 +1,157 @@
+// Modal box Recipe default hidden
+#modalRecipe {
+  visibility: hidden;
+}
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  &__box {
+    background-color: $color-bg-screen;
+    width: 100vw;
+    height: 100vh;
+    border: 1px dashed black;
+    padding: $space-s;
+    @include laptop {
+      width: 60vw;
+      height: 80vh;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: $space-xs;
+    border-bottom: 1px solid $color-sidePanel_nav;
+    margin-bottom: $space-sm;
+    @include laptop {
+      height: unset;
+      flex-direction: unset;
+    }
+  }
+  &__title {
+    font-size: $font-size-subtitle;
+    color: $color-buttons-headerScreen;
+    font-weight: $medium;
+    text-transform: uppercase;
+  }
+  &__buttons {
+    align-self: flex-end;
+    margin-bottom: 2rem;
+    @include laptop {
+      margin-bottom: 0;
+    }
+  }
+}
+//
+.step1 {
+  &__box {
+    padding: $space-xs;
+  }
+  &__title {
+    font-size: $font-size-sm;
+    color: $color-sidePanel_nav;
+    @include laptop {
+      font-size: $font-size-subtitle;
+    }
+  }
+  &__input {
+    display: block;
+    width: 100%;
+  }
+}
+//
+.step2 {
+  &__box {
+    padding: $space-xs;
+  }
+  &__title {
+    font-size: $font-size-sm;
+    color: $color-sidePanel_nav;
+    padding-bottom: $space-s;
+    border-bottom: 1px solid $color-sidePanel_nav;
+    @include laptop {
+      font-size: $font-size-subtitle;
+    }
+  }
+  &__add {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: $space-s;
+  }
+  &__input {
+    width: 90%;
+  }
+  &__list {
+    overflow: auto;
+    height: 30vh;
+    margin-top: $space-md;
+    &--intructions {
+      list-style: decimal inside;
+    }
+    &--ingredients {
+      list-style: disc inside;
+    }
+  }
+}
+
+// Styling fas icons - square
+.fa-plus-square {
+  color: $color-success;
+  font-size: $font-size-h2;
+  cursor: pointer;
+}
+
+// dispaly Warning if empty fields
+.warning {
+  display: none;
+  color: red;
+  font-weight: $medium;
+  justify-content: center;
+}
+.warning.show {
+  display: flex;
+}
+
+// delete row 
+.removeItem {
+  cursor: pointer;
+  color: $color-jedzonko;
+  font-size: $font-size-sm;
+}
+.itemRecipes {
+  font-weight: $medium;
+  font-size: $font-size-sm;
+}
+
+// disabling transition
+.btn--noTransition{
+  text-align: center;
+  display: inline-block;
+  font-weight: $medium;
+  font-family: 'Open sans';
+  color: $color-text-secondary;
+  padding: .785rem .785rem;
+  border: 0;
+  border-radius: 0;
+  background-color: $color-buttons-headerScreen;
+  font-size: $font-size-s-mobile;
+  &:hover {
+    background-color: $color-warning;
+    transition: 0.5;
+  }
+}

@@ -1,0 +1,33 @@
+.cta {
+    background-color: $color-sidePanel_nav;
+    padding: $space-lg;
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: $space-s 0;
+        @include laptop { 
+            align-items: flex-start; 
+        }
+        &--center {
+            justify-content: flex-end;
+            @include laptop { 
+                align-items: center;
+                justify-content: center; 
+            }
+        }
+    }
+    &__title {
+        font-size: $font-size-h3;
+        color: $color-text-secondary;
+        margin-bottom: $space-sm;
+        line-height: $space-md;
+    }
+    &__description {
+        // font-size: $font-size-h3;
+        color: $color-text-secondary;
+    }
+}
+

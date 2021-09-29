@@ -1,0 +1,40 @@
+.feature {
+  background-color: #fff;
+  &__container {
+    padding: $space-md;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      padding: $space-md;
+    }
+    @include laptop {
+        padding: $space-lg;
+      }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $space-md $space-lg;
+  }
+  &__heading {
+    font-size: $font-size-h3;
+    padding-bottom: $space-lg;
+    font-weight: $medium;
+  }
+  &__title {
+    font-weight: $medium;
+    font-size: $font-size-subtitle;
+    margin-bottom: $space-s;
+  }
+  &__text {
+    text-align: center;
+  }
+  &__icon {
+    font-size: $font-size-h1;
+    margin-bottom: $space-md;
+    color: $color-row-text;
+  }
+}

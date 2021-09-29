@@ -1,0 +1,58 @@
+.recipes {
+  background-color: $color-bg-screen;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed black;
+  padding: $space-s;
+  display: block;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+     border-bottom: 1px solid $color-sidePanel_nav;
+  }
+  &__table {
+    width: 100%;
+    margin-top: $space-md;
+  }
+}
+
+.table {
+  &__row {
+   height: 5vh;
+   text-align: left;
+   border-bottom: 1px solid lightgray;
+   word-break: break-all;
+   @include tablet {
+     height: 3vh;
+   }
+   @include tablet {
+    height: 4vh;
+  }
+   &:hover{
+     background-color: gray;
+     color: #fff;
+     transition: 0.4s;
+   }
+  }
+  &__header {
+    font-size: $font-size-sm;
+    font-weight: $medium;
+    padding-right: 1rem;
+    @include tablet {
+      font-size: $font-size-subtitle;
+    }
+    &:nth-child(1) {
+      min-width: 8vw;
+    }
+    &:nth-child(2) {
+      width: 20vw;
+    }
+    &:nth-child(7) {
+      width: 70vw;
+    }
+  }
+  &__item {
+    word-break: break-all;
+    padding: $space-xs;
+  }
+}

@@ -1,0 +1,217 @@
+/** 
+*       Header
+*
+* */
+.headerApp {
+  width: 100%;
+  background-color: $color-sidePanel_nav;
+  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 1.275rem;
+    background-color: $color-sidePanel_nav;
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3);
+    @include tablet {
+      height: 8vh;
+    } 
+    @include laptop {
+      height: 10vh;
+    }
+  }
+  &__userbox {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+// styling for userbox
+.userbox {
+  &__name {
+    color: $color-text-secondary;
+    margin-right: $space-s;
+    text-transform: capitalize;
+  }
+  &__icon {
+    color: $color-buttons-headerScreen;
+    font-size: $font-size-subtitle;
+  }
+}
+/**
+*
+*   Navigation
+*
+* */
+.navApp {
+  background-color: $color-sidePanel_nav;
+  min-height: 100%;
+  &__menu {
+    display: flex;
+    justify-content: space-around;
+    @include laptop {
+      display: block;
+    }
+  }
+  &__element {
+    width: 33.3%;
+    @include laptop {
+      width: 100%;
+    }
+  }
+  &__link {
+    position: relative;
+    display: block;
+    text-align: center;
+    color: $color-text-secondary;
+    padding: $space-s;
+    @include laptop {
+      padding-left: $space-sm;
+      text-align: left;
+    }
+    &:hover {
+      color: $color-buttons-headerScreen;
+      transition: 0.5s;
+      &::after {
+        font-family: "Font Awesome 5 Free";
+        content: "";
+        position: absolute;
+        right: $space-s;
+        font-weight: 900;
+        font-size: 0.8rem;
+        color: $color-buttons-headerScreen;
+        @include laptop {
+          content: "\f054";
+          right: $space-s;
+        }
+      }
+    }
+  }
+}
+.active {
+  font-weight: $medium;
+  border-bottom: 4px solid $color-buttons-headerScreen;
+  @include laptop {
+    border-bottom: none;
+    border-left: 4px solid $color-buttons-headerScreen;
+
+  }
+  &::after {
+    font-family: "Font Awesome 5 Free";
+    content: "";
+    position: absolute;
+    right: $space-s;
+    font-weight: 900;
+    font-size: 0.8rem;
+    color: $color-buttons-headerScreen;
+    @include laptop {
+      content: "\f054";
+    }
+  }
+}
+
+/**
+*
+*      Main Content
+*
+* */
+.content {
+  padding: $space-md $space-s;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("../../../images/app__background.png");
+  background-repeat: repeat;
+  background-size: 350px;
+  @include tablet {
+    padding: $space-lg;
+    min-height: 92vh;
+  } 
+  @include tablet {
+    min-height: 90vh;
+  }
+}
+
+/**
+* Section welcome
+**/
+.welcome {
+  background-color: $color-bg-screen;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed black;
+  padding: $space-xl;
+  display: none;
+  &__firstTime {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: $medium;
+  }
+  &__title {
+    font-size: $font-size-h2;
+    margin-bottom: $space-sm;
+  }
+  &__description {
+    font-size: $font-size-subtitle;
+    margin-bottom: $space-sm;
+    line-height: $space-md;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: $space-md;
+  }
+  &__input {
+    margin-bottom: $space-s;
+    width: 20vw;
+  }
+  &__hint {
+    display: flex;
+    justify-content: center;
+    &--title {
+      text-align: center;
+      font-size: $font-size-subtitle;
+      line-height: $space-md;
+    }
+  }
+}
+
+/**
+*
+* Return section
+*
+*
+**/
+.return {
+  display: none;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    background-color: $color-bg-screen;
+    padding: $space-md;
+    margin: $space-xs;
+    border: 1px  dashed lightgray;
+  }
+  &__container {
+    display: flex;
+  }
+}
+// reset row
+.row [class*="col-"] {
+  padding: 0;
+  margin: 0;
+}
+
+// Add class .show to display content
+.show {
+  display: block;
+}

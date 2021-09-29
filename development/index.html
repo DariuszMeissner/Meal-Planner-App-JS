@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Zaplanuj Jedzonko</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header--container">
+      <h1 class="header__logo">
+        <a href="./index.html" title="ZaplanujJedzonko.pl">
+          <span class="header__logo--first">Zaplanuj</span>
+          <span class="header__logo--second">Jedzonko</span>
+        </a>
+      </h1>
+      <nav class="menu">
+        <input type="checkbox" id="menu__btn" class="menu__btn" />
+        <label for="menu__btn" class="menu__toogle"><i class="fas fa-bars"></i><i class="fas fa-times"></i></label>
+        <ul class="header__nav">
+          <li class="nav__element"><a href="app.html" class="nav__link">Zaplanuj posiłki</a></li>
+          <li class="nav__element"><a href="#feature" class="nav__link">Dlaczego Warto</a></li>
+          <li class="nav__element"><a href="#author" class="nav__link">O mnie</a></li>
+          <li class="nav__element"><a href="#form" class="nav__link">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="carousel">
+    <div class="carousel__body">
+      <div class="carousel__box">
+        <div class="carousel__item carousel__item--1">
+          <div class="carousel__content carousel__content--1">
+            <h2 class="carousel__title">Zacznij planowanie już dzisiaj</h2>
+            <p class="carousel__description">Description</p>
+            <button class="btn btn__large">Zacznij!</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel__box">
+        <div class="carousel__item carousel__item--2">
+          <div class="carousel__content carousel__content--2">
+            <h2 class="carousel__title">Szybciej i łatwiej z nową aplikacją</h2>
+            <p class="carousel__description">pobierz aplikację</p>
+            <button class="btn btn__large">Pobierz!</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel__box">
+        <div class="carousel__item carousel__item--3">
+          <div class="carousel__content carousel__content--3">
+            <h2 class="carousel__title">Promocja do końca miesiąca</h2>
+            <p class="carousel__description">description</p>
+            <button class="btn  btn__large">Zacznij!</button>
+          </div>
+        </div>
+      </div>
+
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8">
+          <div class="cta__box">
+            <h3 class="cta__title">Lorem ipsum dolor si amet</h3>
+            <p class="cta__description">Consectetur adiscing elit, sed do eiusmod tempor incididunt ut labore et dolor
+              magna aliqua.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <div class="cta__box cta__box--center">
+            <button class='btn'>Rozpocznij!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="feature" class="feature">
+    <div class="container feature__container">
+      <h2 class="feature__heading">Nasze usługi</h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <div class="feature__box">
+            <i class="feature__icon fas fa-check"></i>
+            <h5 class="feature__title">Lorem ipsum dolor</h5>
+            <p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus velit lorem.
+              Nunc a laoreet mauris, ac vulputate massa. Cras varius ornare velit. Duis nisl augue, maximus sed neque
+              in, laoreet ultrices tellus. Vestibulum tempus placerat nisi et pharetra.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="feature__box">
+            <i class="feature__icon far fa-clock"></i>
+            <h5 class="feature__title">Lorem ipsum dolor</h5>
+            <p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus velit lorem.
+              Nunc a laoreet mauris, ac vulputate massa. Cras varius ornare velit. Duis nisl augue, maximus sed neque
+              in, laoreet ultrices tellus. Vestibulum tempus placerat nisi et pharetra. In pretium nisi a lectus mattis,
+              eget feugiat justo finibus.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="feature__box">
+            <i class="feature__icon fas fa-list"></i>
+            <h5 class="feature__title">Lorem ipsum dolor</h5>
+            <p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus velit lorem.
+              Nunc a laoreet mauris, ac vulputate massa. Cras varius ornare velit. Duis nisl augue, maximus sed neque
+              in, laoreet ultrices tellus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="form" class="form">
+    <div class="container form__container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8">
+          <div class="form__text">
+            <h4 class="form__title">Lorem ipsum dolor si amet consectetur adipiscing elit</h4>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <div class="form__text form__text--button">
+            <input class="search" type="text">
+            <button class="btn">Lorem</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="author" class="author">
+    <div class="container author__container">
+      <h2 class="author__heading">O autorze</h2>
+      <div class="row author__row">
+        <div class="col-xs-12 col-sm-4">
+          <div class="author__box">
+            <img class="author__images"  src="images/author.jpg" alt="Author">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <div class="author__box author__box--left">
+            <h5 class="author__title">Jan Kowalski</h5>
+            <p class="author__text">Jan is passionate about basketball and loves to play golf. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus velit lorem.
+              Nunc a laoreet mauris, ac vulputate massa. Cras varius ornare velit. Duis nisl augue, maximus sed neque
+              in, laoreet ultrices tellus.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <footer class="footer">
+    <div class="container footer__container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <div class="footer__box footer__box--short">
+            <p class="footer__title">Lorem ipsum dolor</p>
+            <p class="footer_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus velit lorem.
+              Nunc a
+              laoreet mauris, ac vulputate massa. Cras varius ornare velit. Duis nisl augue, maximus sed neque in,
+              laoreet
+              ultrices tellus. Vestibulum tempus placerat nisi et pharetra.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <div class="footer__box">
+            <p class="footer__title">Lorem ipsum dolor</p>
+            <ul class="footer__list">
+              <li class="footer__list--line">Lorem ipsum dolor sit amet,</li>
+              <li class="footer__list--line">Lorem ipsum dolor sit amet,</li>
+              <li class="footer__list--line">Lorem ipsum dolor sit amet,</li>
+              <li class="footer__list--line">Lorem ipsum dolor sit amet,</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <div class="footer__box">
+            <p class="footer__title">Lorem ipsum dolor</p>
+            <div class="footer__box--input">
+              <input class="footer__bar" type="text">
+              <button class="btn footer__btn">Zapisz się</button>
+            </div>
+            <div class="footer__social">
+              <i class="social__icon fab fa-facebook-square" title="facebook"></i>
+              <i class="social__icon fab fa-twitter-square" title="twitter"></i>
+              <i class="social__icon fab fa-instagram-square" title="instagram"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-xs-12">
+      <div class="footer__copyright">
+        <p class="copyright__text">Copyright</p>
+        <a href="index.html" class="copyright__link">ZaplanujJedzonko.pl</a>
+      </div>
+    </div>
+
+
+
+  </footer>
+  
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
