@@ -46,7 +46,7 @@
                         <div class="recipes__box">
                             <div class="recipes__header">
                                 <h3 class="modal__title">Lista przepisów</h3>
-                                <i id="addRecipe" class="fas fa-plus-square"></i>
+                                <i id="b1" class="fas fa-plus-square"></i>
                             </div>
                         </div>
                         <table class="recipes__table">
@@ -55,12 +55,81 @@
                                     <th class="table__header">Id</th>
                                     <th class="table__header">Nazwa</th>
                                     <th class="table__header">Opis</th>
+                                    <th class="table__header">Akcja</th>
                                 </tr>
                             </thead>
                             <tbody id="allRecipes"></tbody>
                         </table>
                     </div>
-
+                    
+                    <!-- The modal box ADD RECIPES -->
+                    <div id="modalRecipe" class="modal">
+                        <div class="modal__box">
+                            <div class="modal__content">
+                                <div class="modal__header">
+                                    <h3 class="modal__title">Nowy przepis</h3>
+                                    <div class="modal__buttons">
+                                        <button id="closeRecipe" class="btn--noTransition">Zapisz i zamknij</button>
+                                        <button id="cancelRecipe" class="btn--noTransition">Anuluj</button>
+                                    </div>
+                                </div>
+                                <div class="modal__step1">
+                                    <!-- display warning if empty fields -->
+                                    <div class="warning">
+                                        <span class="warning__title"></span>
+                                    </div>
+                                    <div class="step1__box">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-3">
+                                                <span class="step1__title">Nazwa przepisu</span>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-9">
+                                                <div contenteditable="true" id="recipeName" class="input__step step1__input"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="step1__box">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-3">
+                                                <span class="step1__title">Opis przepisu</span>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-9">
+                                                <div contenteditable="true" id="recipeDesc" class="input__step step1__input"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__step2">
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6">
+                                            <div class="step2__box">
+                                                <h3 class="step2__title">Instrukcje</h3>
+                                                <div class="step2__add">
+                                                    <div contenteditable="true" id="instruction" class="input__step step2__input"></div>
+                                                    <i id="add__instructon" class="fas fa-plus-square"></i>
+                                                </div>
+                                                <ol id="instructionsList" class="step2__list step2__list--intructions">
+                    
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6">
+                                            <div class="step2__box">
+                                                <h3 class="step2__title">Składniki</h3>
+                                                <div class="step2__add">
+                                                    <div contenteditable="true" id="ingredient" class="input__step step2__input"></div>
+                                                    <i id="add__ingredient" class="fas fa-plus-square"></i>
+                                                </div>
+                                                <ul id="ingredientsList" class="step2__list step2__list--ingredients">
+                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                        
@@ -69,7 +138,7 @@
         </div>
     </main>
 
-    <script src="./js/allRecipes.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
