@@ -292,11 +292,11 @@ class Plans extends Dashboard {
     if (this.returnSection) {
       this.closeSaveScheduleBtn.addEventListener("click", (e) => {
         console.log(this.allSchedules);
-        this.currentPlan();
+        this.renderPlan();
       });
-      this.prevPlan.addEventListener("click", () => this.currentPlan(-1));
-      this.nextPlan.addEventListener("click", () => this.currentPlan(1));
     }
+    this.prevPlan.addEventListener("click", () => this.currentPlan(-1));
+    this.nextPlan.addEventListener("click", () => this.currentPlan(1));
   }
 }
 
