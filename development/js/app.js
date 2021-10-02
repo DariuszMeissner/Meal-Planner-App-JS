@@ -156,8 +156,7 @@ class Dashboard {
         this.infoNoPlans.style.display = "flex";
         this.tablePlan.style.display = "none";
         this.notifi.info.innerText = `Nie ustawiłeś żadnych planów i przepisów`;
-      }
-      if (this.allSchedules === null && this.allRecipes !== null) {
+      } else if (this.allSchedules === null && this.allRecipes !== null) {
         this.infoNoPlans.style.display = "flex";
         this.tablePlan.style.display = "none";
         this.notifi.info.innerText = `Przepisy: ${this.allRecipes.length}, Plany: 0`;
