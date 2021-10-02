@@ -233,10 +233,11 @@
     height: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   &__item {
     background-color: $color-bg-screen;
+    margin-bottom: $space-s;
     padding: $space-xs;
     border: 1px dashed black;
     font-weight: $medium;
@@ -288,13 +289,21 @@
     font-weight: $medium;
     color: $color-buttons-headerScreen;
   }
+  &__currentTitle {
+    font-weight: $medium;
+    color: $color-info;
+  }
+  &__tableSection {
+    display: none;
+  }
+  &__table {
+    width: 100%;
+  }
 }
 
 .table {
   &__schedule {
      width: 100%;
-  }
-  &__item {
   }
 }
 
