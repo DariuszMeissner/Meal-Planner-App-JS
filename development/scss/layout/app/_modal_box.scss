@@ -67,9 +67,6 @@
   &__title {
     font-size: $font-size-sm;
     color: $color-sidePanel_nav;
-    @include laptop {
-      font-size: $font-size-subtitle;
-    }
   }
   &__input {
     display: block;
@@ -86,9 +83,6 @@
     color: $color-sidePanel_nav;
     padding-bottom: $space-s;
     border-bottom: 1px solid $color-sidePanel_nav;
-    @include laptop {
-      font-size: $font-size-subtitle;
-    }
   }
   &__add {
     display: flex;
