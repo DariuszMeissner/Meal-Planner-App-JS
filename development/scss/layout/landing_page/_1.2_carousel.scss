@@ -29,7 +29,7 @@
     animation-iteration-count: 1;
     &--1 {
       align-items: center;
-      background-image: url("../../../images/slider1.jpg");
+      background-image: url("../images/slider1.jpg");
       background-position: right;
       @include tablet {
         justify-content: center;
@@ -38,7 +38,7 @@
     }
     &--2 {
       align-items: center;
-      background-image: url("../../../images/slider2.jpg");
+      background-image: url("../images/slider2.jpg");
       background-position: center;
       @include tablet {
         justify-content: flex-start;
@@ -47,7 +47,7 @@
     }
     &--3 {
       align-items: flex-end;
-      background-image: url("../../../images/slider3.jpg");
+      background-image: url("../images/slider3.jpg");
       background-position: center;
       @include tablet {
         justify-content: center;

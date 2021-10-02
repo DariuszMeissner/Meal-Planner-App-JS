@@ -61,6 +61,7 @@
     padding: $space-xs $space-sm;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: 0.4s;
     &:hover {
       color: $color-buttons-headerScreen;
       transition: 0.5s;

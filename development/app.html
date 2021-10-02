@@ -39,10 +39,10 @@
         </aside>
       </div>
       <div class="col-xs-12 col-md-10">
-        <section class="content">
+        <div class="content">
 
 
-          <div id="welcome" class="welcome show">
+          <section id="welcome" class="welcome show">
             <div class="welcome__firstTime">
               <h2 class="welcome__title">Witaj,</h2>
               <p class="welcome__description">wygląda na to, że jesteś tutaj <br> pierwszy raz</p>
@@ -56,87 +56,85 @@
               <p class="welcome__hint--title">Podaj nam swoje imię, a my zorganizujemy<br> dla Ciebie naszą aplikację
               </p>
             </div>
-          </div>
+          </section>
 
-            <div id="return" class="return ">
-              <div class="info">
-                <div class="return__container">
-                  <div id="b1" class="return__box">
-                    <i class="return__addRecipe far fa-plus-square"></i>
-                    <span class="return__title">Dodaj przepis</span>
-                  </div>
-                  <div id="b2" class="return__box">
-                    <i class="return__addSchedule far fa-plus-square"></i>
-                    <span class="return__title">Dodaj plan</span>
+          <section id="return" class="return ">
+            <div class="row">
+
+              <div class="col-xs-6 col-sm-3 col-md-2">
+
+                <div class="widget">
+                  <div id="b1" class="widget__box">
+                    <i class="widget__add far fa-plus-square"></i>
+                    <span class="widget__title">Dodaj przepis</span>
                   </div>
                 </div>
               </div>
-              <!-- <div class="schedule__con">        
-                <div class="schedule__container">
-                    <div class="days__container">
-                        <span class="corner"></span>
-                        <div class="day">Poniedziałek</div>
-                        <div class="day">Wtorek</div>
-                        <div class="day">Środa</div>
-                        <div class="day">Czwartek</div>
-                        <div class="day">Piątek</div>
-                        <div class="day">Sobota</div>
-                        <div class="day">Niedziela</div>
-                    </div>
-                    <div class="part__day">
-                        <span class="time">Śniadanie</span>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                    </div>
-                    <div class="part__day">
-                        <span class="time">Drugie Śniadanie</span>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                    </div>
-                    <div class="part__day">
-                        <span class="time">Zupa</span>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                    </div>
-                    <div class="part__day">
-                        <span class="time">Drugie Danie</span>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                    </div>
-                    <div class="part__day">
-                        <span class="time">Kolacja</span>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                        <div class="meal"></div>
-                    </div>
-                </div>
-            </div> -->
+              <div class="col-xs-6 col-sm-3 col-md-2">
 
-          <!-- The modal box -->
+                <div class="widget">
+                  <div id="b2" class="widget__box">
+                    <i class="widget__add far fa-plus-square"></i>
+                    <span class="widget__title">Dodaj plan</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xs-12 col-sm-6 col-md-8">
+                <div class="notifi">
+                  <div class="notifi__box">
+                    <span class="notifi__item notifi__item--blue">
+                      <p id="info">Masz już {liczba przepisów} przepisów</p>
+                    </span>
+                    <span class="notifi__item notifi__item--yellow">
+                      <p id="warning">
+                        Pamiętaj aby dodać plan</p>
+                    </span>
+                    <span class="notifi__item notifi__item--green">
+                      <p id="success">Świetnie że jesteś! Udanego planowania i smacznego</p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                <div class="week">
+                  <div class="week__box">
+                    <h4 class="week__currentTitle">Twój plan na {nr tygodnia} tydzień:</h4>
+                    <div class="week__tableSection">
+                      <h4 class="week__title">Twój plan na {nr tygodnia} tydzień:</h4>
+                      <table class="week__table">
+                        <thead>
+                          <tr class='table__row'>
+                            <th class="table__header">Poniedziałek</th>
+                            <th class="table__header">Wtorek</th>
+                            <th class="table__header">Środa</th>
+                            <th class="table__header">Czwartek</th>
+                            <th class="table__header">Piątek</th>
+                            <th class="table__header">Sobota</th>
+                            <th class="table__header">Niedziela</th>
+                          </tr>
+                        </thead>
+                        <tbody id="weekPlan">
+                          <!-- rendering current plan or next -->
+                        </tbody>
+                      </table>
+                      <div class="week__boxBtn">
+                        <button id='prevPlan' class="btn btn__scroll"><i class="fas fa-chevron-left"></i>poprzedni</button>
+                        <button id='nextPlan' class="btn btn__scroll">następny<i class="fas fa-chevron-right"></i></button>
+                      </div>
+                    </div>
+                    <div class="info__noPlans">
+                      <h3>Brak planu, <br>ustal swój plan żywieniowy na cały tydzień!</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </section>
+
+          <!-- The modal box ADD RECIPES -->
           <div id="modalRecipe" class="modal">
             <div class="modal__box">
               <div class="modal__content">
@@ -206,10 +204,277 @@
           </div>
 
 
-        </section>
+          <!-- The modal box  ADD SCHEDULE-->
+          <div id="modalSchedule" class="modal">
+            <div class="modal__box">
+              <div class="modal__content">
+                <div class="modal__header">
+                  <h3 class="modal__title">Nowy plan</h3>
+                  <div class="modal__buttons">
+                    <button id="closeSchedule" class="btn--noTransition">Zapisz i zamknij</button>
+                    <button id="cancelSchedule" class="btn--noTransition">Anuluj</button>
+                  </div>
+                </div>
+                <div class="modal__step1">
+                  <!-- display warning if empty fields -->
+                  <div id="warningSchedule" class="warning">
+                    <span class="warning__title"></span>
+                  </div>
+                  <div class="step1__box">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-3">
+                        <span class="step1__title">Nazwa planu</span>
+                      </div>
+                      <div class="col-xs-12 col-sm-9">
+                        <div contenteditable="true" id="scheduleName" class="input__step step1__input"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step1__box">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-3">
+                        <span class="step1__title">Opis planu</span>
+                      </div>
+                      <div class="col-xs-12 col-sm-9">
+                        <div contenteditable="true" id="scheduleDesc" class="input__step step1__input"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step1__box">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-3">
+                        <span class="step1__title">Numer tygodnia</span>
+                      </div>
+                      <div class="col-xs-12 col-sm-1">
+                        <div contenteditable="true" id="scheduleWeekNr" class="input__step step1__input"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal__step2">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <table class="table__schedule">
+                        <thead>
+                          <tr>
+                            <th class="table__header"></th>
+                            <th class="table__header">śniadanie</th>
+                            <th class="table__header">drugie śniadanie</th>
+                            <th class="table__header">zupa</th>
+                            <th class="table__header">drugie danie</th>
+                            <th class="table__header">kolacja</th>
+                          </tr>
+                          <tr id="rowMon" class="table__row">
+                            <th class="table__header">Poniedziałek</th>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList mon">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList mon">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList mon">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList mon">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList mon">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr id="rowTue" class="table__row">
+                            <th class="table__header">Wtorek</th>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList tue">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList tue">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList tue">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList tue">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList tue">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+
+                          </tr>
+                          <tr id="rowWed" class="table__row">
+                            <th class="table__header">Środa</th>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList wed">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList wed">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList wed">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList wed">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList wed">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                          <tr id="rowThu" class="table__row">
+                            <th class="table__header">Czwartek</th>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList thu">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList thu">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList thu">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList thu">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList thu">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr id="rowFri" class="table__row">
+                            <th class="table__header">Piątek</th>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList fri">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList fri">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList fri">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList fri">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList fri">
+                                <option value="posiłek">kolacja</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr id="rowSat" class="table__row">
+                            <th class="table__header">Sobota</th>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList sat">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList sat">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList sat">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList sat">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList sat">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr id="rowSun" class="table__row">
+                            <th class="table__header">Niedziela</th>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList sun">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList sun">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList sun">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList sun">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                            <td class="table__item">
+                              <select name="recipeList" class="recipeList sun">
+                                <option value="posiłek">posiłek</option>
+                              </select>
+                            </td>
+                          </tr>
+
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </main>
   <script src="./js/app.js"></script>
 </body>
+
 </html>

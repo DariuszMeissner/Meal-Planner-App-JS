@@ -2,7 +2,7 @@
   background-color: $color-sidePanel_nav;
   color: $color-text-secondary;
   &__container {
-      padding: $space-md;
+    padding: $space-md;
   }
   &__box {
     display: flex;
@@ -11,43 +11,77 @@
     align-items: center;
     padding: $space-md $space-lg;
     text-align: center;
-    &--input {
-        display: flex;
-        padding: 0;
-        @include tablet {
-            justify-content: center;
-        }
+    @include laptop {
+      text-align: left;
+      padding: $space-sm;
+      align-items: space-betwee;
+    }
+
+    &--list {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      @include tablet {
+        justify-content: center;
+      }
     }
     &--short {
-        @include tablet {
-            padding: 0 $space-xxl;
-        }
+      @include tablet {
+        padding: 0 $space-xxl;
+      }
+      @include laptop {
+        padding: 0 0;
+      }
     }
-    @include laptop {
-        text-align: left;
-        align-items: flex-start;
-        padding: $space-sm;
+    &--social {
+      @include laptop {
+        padding: 0 0;
+        align-items: flex-end;
+      }
+    }
+    &--input {
+      display: flex;
+      padding: 0;
+      @include tablet {
+        justify-content: center;
+      }
+      @include laptop {
+        margin-bottom: $space-sm;
+      }
     }
   }
   &__title {
     font-size: 20px;
     margin-bottom: $space-sm;
     @include laptop {
-        align-self: flex-start;
-        
+      align-self: flex-start;
+      &--center {
+        align-self: center;
+      }
+      &--right {
+        align-self: flex-end;
+      }
     }
   }
   &__list {
-    list-style:disc inside;
-    &--line{
-        margin: $space-xs 0;
+    list-style: disc inside;
+    &--line {
+      margin: $space-xs 0;
     }
   }
   &__bar {
-    margin-bottom: $space-s;  
+    margin-bottom: $space-s;
+    @include laptop {
+      margin-bottom: 0;
+
+    }
   }
   &__btn {
-    margin-bottom: $space-s;  
+    margin-bottom: $space-s;
+    @include laptop {
+      margin-bottom: 0;
+
+    }
   }
 
   &__copyright {
@@ -59,15 +93,15 @@
   }
 }
 .social__icon {
-    font-size: $font-size-h3;
-    padding:0  $space-s;
-    &:nth-child(1) {
-        padding-left:0;
-    }
-    &:hover {
-        cursor: pointer;
-        color: $color-row-text; 
-    }
+  font-size: $font-size-h3;
+  padding: 0 $space-s;
+  &:nth-child(1) {
+    padding-left: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $color-row-text;
+  }
 }
 .copyright {
   &__text {
@@ -75,6 +109,6 @@
   }
 }
 .copyright__link {
-    color: $color-jedzonko;
-    padding-left: $space-xs;
+  color: $color-jedzonko;
+  padding-left: $space-xs;
 }

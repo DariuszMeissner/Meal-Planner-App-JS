@@ -2,6 +2,9 @@
 #modalRecipe {
   visibility: hidden;
 }
+#modalSchedule {
+  visibility: hidden;
+}
 .modal {
   display: flex;
   align-items: center;
@@ -64,9 +67,6 @@
   &__title {
     font-size: $font-size-sm;
     color: $color-sidePanel_nav;
-    @include laptop {
-      font-size: $font-size-subtitle;
-    }
   }
   &__input {
     display: block;
@@ -83,9 +83,6 @@
     color: $color-sidePanel_nav;
     padding-bottom: $space-s;
     border-bottom: 1px solid $color-sidePanel_nav;
-    @include laptop {
-      font-size: $font-size-subtitle;
-    }
   }
   &__add {
     display: flex;
@@ -127,7 +124,7 @@
   display: flex;
 }
 
-// delete row 
+// delete row
 .removeItem {
   cursor: pointer;
   color: $color-jedzonko;
@@ -139,13 +136,13 @@
 }
 
 // disabling transition
-.btn--noTransition{
+.btn--noTransition {
   text-align: center;
   display: inline-block;
   font-weight: $medium;
-  font-family: 'Open sans';
+  font-family: "Open sans";
   color: $color-text-secondary;
-  padding: .785rem .785rem;
+  padding: 0.785rem 0.785rem;
   border: 0;
   border-radius: 0;
   background-color: $color-buttons-headerScreen;
