@@ -21,8 +21,8 @@ Scrum project during workshop from 12.09-12.12, which I continue to develop.
 - carousel changing on time or click
 - RWD
 
-### demo App https://dariuszmeissner.github.io/Scrum-Meal-Planner-App-JS/app.html
-### demo Landing page https://dariuszmeissner.github.io/Scrum-Meal-Planner-App-JS/index.html
+#### demo App https://dariuszmeissner.github.io/Scrum-Meal-Planner-App-JS/app.html
+#### demo Landing page https://dariuszmeissner.github.io/Scrum-Meal-Planner-App-JS/index.html
 
 
 
