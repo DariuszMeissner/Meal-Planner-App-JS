@@ -27,6 +27,7 @@ Scrum project during workshop from 12.09-12.12, which I continue to develop.
 - improvement display table on small screen
 - adding validation like numbers of words, type of field
 - improvement form fields
+- fixing not displaying hover effect based on window.location.path
 
 #### demo App https://dariuszmeissner.github.io/Scrum-Meal-Planner-App-JS/app.html
 #### demo Landing page https://dariuszmeissner.github.io/Scrum-Meal-Planner-App-JS/index.html
