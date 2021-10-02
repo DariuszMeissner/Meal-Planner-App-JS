@@ -17,6 +17,20 @@
   @include tablet {
     padding: .785rem 1rem;
   }
+  &__scroll {
+    font-size: $font-size-s-mobile;
+    background-color: transparent;
+    color: $color-buttons-headerScreen;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background-color: transparent;
+      color: $color-warning;
+    }
+  }
+  &__scroll .fas {
+    padding: $space-xs;
+  }
 }
 
 .btn__large {
