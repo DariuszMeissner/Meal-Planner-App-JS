@@ -26,7 +26,7 @@ Scrum project during workshop from 12.09-12.12, which I continue to develop.
 ### What next?
 - improvement display table on small screen
 - adding validation like numbers of words, type of field
-- deleting
+- improvement form fields
 
 #### demo App https://dariuszmeissner.github.io/Scrum-Meal-Planner-App-JS/app.html
 #### demo Landing page https://dariuszmeissner.github.io/Scrum-Meal-Planner-App-JS/index.html
