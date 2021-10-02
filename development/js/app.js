@@ -135,7 +135,6 @@ class Dashboard {
   }
   notification() {
     this.warningNoPlan = document.querySelector(".notifi__item--yellow");
-    this.successHide = document.querySelector(".notifi__item--green");
     this.allSchedules = JSON.parse(localStorage.getItem("schedules"));
 
     if (this.returnSection) {
@@ -147,17 +146,25 @@ class Dashboard {
     }
   }
   numberOfRecipes() {
+    this.infoNoPlans = document.querySelector(".info__noPlans");
     this.tablePlan = document.querySelector(".week__tableSection");
     this.allRecipes = JSON.parse(localStorage.getItem("recipes"));
     this.allSchedules = JSON.parse(localStorage.getItem("schedules"));
 
     if (this.returnSection) {
-      if (this.allSchedules === null) {
+      if (this.allSchedules === null && this.allRecipes === null) {
+        this.infoNoPlans.style.display = "flex";
         this.tablePlan.style.display = "none";
         this.notifi.info.innerText = `Nie ustawiłeś żadnych planów i przepisów`;
-      } else if (this.allSchedules.length > 0) {
+      }
+      if (this.allSchedules === null && this.allRecipes !== null) {
+        this.infoNoPlans.style.display = "flex";
+        this.tablePlan.style.display = "none";
+        this.notifi.info.innerText = `Przepisy: ${this.allRecipes.length}, Plany: 0`;
+      } else {
+        this.infoNoPlans.style.display = "none";
         this.tablePlan.style.display = "block";
-        this.notifi.info.innerText = `Plany: ${this.allSchedules.length}, Przepisy: .`;
+        this.notifi.info.innerText = `Przepisy: ${this.allRecipes.length}, Plany: ${this.allSchedules.length}`;
       }
     }
   }
@@ -200,7 +207,16 @@ class Plans extends Dashboard {
       this.weekCurrentTitle.innerText = `Mamy ${this.date.getWeek()} tydzień roku`;
     }
   }
+  closestPlan() {
+    this.allSchedules = JSON.parse(localStorage.getItem("schedules"));
+    this.goal = this.date.getWeek();
 
+    this.result = this.allSchedules.sort((a, b) => {
+      return Math.abs(this.goal - a.week) - Math.abs(this.goal - b.week);
+    });
+
+   return this.result[0].week;
+  }
   renderPlan() {
     if (this.returnSection) {
       this.allSchedules = JSON.parse(localStorage.getItem("schedules"));
@@ -227,7 +243,8 @@ class Plans extends Dashboard {
               this.weekPlanSection.appendChild(this.newTr);
             }
           } else {
-            if (el.id == 1) {
+            if (el.week == this.closestPlan()) {
+              this.weekPlanSection.innerHTML = "";
               this.weekTitle.innerText = `Twój plan na ${el.week} tydzień:`;
               for (let i = 0; i < el.mon.length; i++) {
                 this.newTr = document.createElement("tr");
@@ -292,7 +309,8 @@ class Plans extends Dashboard {
     if (this.returnSection) {
       this.closeSaveScheduleBtn.addEventListener("click", (e) => {
         console.log(this.allSchedules);
-        this.currentPlan();
+        this.renderPlan();
+        this.numberOfRecipes();
       });
       this.prevPlan.addEventListener("click", () => this.currentPlan(-1));
       this.nextPlan.addEventListener("click", () => this.currentPlan(1));
@@ -676,7 +694,6 @@ class ShowAllRecipes extends Dashboard {
                         <td class="table__item">${el.id}</td>  
                         <td class="table__item">${el.title}</td>  
                         <td class="table__item">${el.desc}</td>
-                        <td class="table__item"><i class="removeItem fas fa-trash-alt"></i></td>
                         `;
           this.allRecipesContainer.appendChild(this.newTr);
         });

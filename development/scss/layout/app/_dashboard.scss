@@ -276,18 +276,26 @@
 }
 
 .week {
+  margin-top: $space-md;
   padding: $space-xs;
   &__box {
+    width: 100%;
     background-color: $color-bg-screen;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: $space-s;
   }
+  &__boxBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   &__title {
     text-align: center;
     font-weight: $medium;
     color: $color-buttons-headerScreen;
+    margin-bottom: $space-xs;
   }
   &__currentTitle {
     font-weight: $medium;
@@ -299,6 +307,17 @@
   &__table {
     width: 100%;
   }
+}
+
+.info__noPlans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:10vh;
+  font-weight: $medium;
+  color: $color-success;
+  font-size: $font-size-sm;
+  text-align: center;
 }
 
 .table {
