@@ -176,9 +176,9 @@ class Dashboard {
   generateId() {}
   currentPage() {
     // navigation routing
-    window.location.pathname === "/Scrum-Meal-Planner-App-JS/app.html" ? this.linkDashboard.classList.add("active") : this.linkDashboard.classList.remove("active");
-    window.location.pathname === "/Scrum-Meal-Planner-App-JS/recipes.html" ? this.linkRecipes.classList.add("active") : this.linkRecipes.classList.remove("active");
-    window.location.pathname === "/Scrum-Meal-Planner-App-JS/schedules.html" ? this.linkSchedule.classList.add("active") : this.linkSchedule.classList.remove("active");
+    window.location.pathname === "/Scrum-Meal-Planner-App-JS/app.html" || window.location.pathname === "/app.html" ? this.linkDashboard.classList.add("active") : this.linkDashboard.classList.remove("active");
+    window.location.pathname === "/Scrum-Meal-Planner-App-JS/recipes.html" || window.location.pathname === "/recipes.html" ? this.linkRecipes.classList.add("active") : this.linkRecipes.classList.remove("active");
+    window.location.pathname === "/Scrum-Meal-Planner-App-JS/schedules.html" || window.location.pathname === "/schedules.html" ? this.linkSchedule.classList.add("active") : this.linkSchedule.classList.remove("active");
   }
   istItLogged() {
     if (localStorage.getItem("newName") != null) {
