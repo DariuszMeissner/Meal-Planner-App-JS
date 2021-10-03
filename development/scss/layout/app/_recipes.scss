@@ -18,10 +18,10 @@
 
 .table {
   &__row {
-    height: 5vh;
     text-align: left;
     border-bottom: 1px solid lightgray;
     word-break: break-all;
+    padding: $space-xs;
     @include tablet {
       height: 3vh;
     }
@@ -30,7 +30,6 @@
     }
   }
   &__header {
-    font-size: $font-size-xs;
     font-weight: $medium;
     @include tablet {
       font-size: $font-size-sm;
@@ -38,6 +37,10 @@
   }
   &__item {
     word-break: break-all;
-    padding: $space-xs;
+    vertical-align: middle;
+    &--alignCenter {
+    text-align: center;
   }
+  }
+  
 }
