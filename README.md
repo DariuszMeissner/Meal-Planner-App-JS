@@ -1,7 +1,7 @@
 # Scrum-Meal-Planner-App
 Application and landing page for planning meals.
 
-Scrum project during workshop from 12.09-12.12, which I continue to develop.
+Scrum project during workshop from 12.09-24.09, which I continue to develop.
 
 
 ## Feature - APP
