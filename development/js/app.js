@@ -176,11 +176,9 @@ class Dashboard {
   generateId() {}
   currentPage() {
     // navigation routing
-    if(window.location.pathname === "/recipes.html") {this.linkRecipes.classList.add("active")} else {this.linkRecipes.classList.remove("active")};
-    if(window.location.pathname === "/app.html") {this.linkDashboard.classList.add("active")} else {this.linkDashboard.classList.remove("active")};
-    if(window.location.pathname === "/schedules.html") {this.linkSchedule.classList.add("active")} else {this.linkSchedule.classList.remove("active")};
-    console.log(window.location.pathname);
-
+    window.location.pathname === "/Scrum-Meal-Planner-App-JS/app.html" ? this.linkDashboard.classList.add("active") : this.linkDashboard.classList.remove("active");
+    window.location.pathname === "/Scrum-Meal-Planner-App-JS/recipes.html" ? this.linkRecipes.classList.add("active") : this.linkRecipes.classList.remove("active");
+    window.location.pathname === "/Scrum-Meal-Planner-App-JS/schedules.html" ? this.linkSchedule.classList.add("active") : this.linkSchedule.classList.remove("active");
   }
   istItLogged() {
     if (localStorage.getItem("newName") != null) {
@@ -216,7 +214,7 @@ class Plans extends Dashboard {
       return Math.abs(this.goal - a.week) - Math.abs(this.goal - b.week);
     });
 
-   return this.result[0].week;
+    return this.result[0].week;
   }
   renderPlan() {
     if (this.returnSection) {
