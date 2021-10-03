@@ -176,9 +176,11 @@ class Dashboard {
   generateId() {}
   currentPage() {
     // navigation routing
-    window.location.pathname === "/recipes.html" ? this.linkRecipes.classList.add("active") : this.linkRecipes.classList.remove("active");
-    window.location.pathname === "/app.html" ? this.linkDashboard.classList.add("active") : this.linkDashboard.classList.remove("active");
-    window.location.pathname === "/schedules.html" ? this.linkSchedule.classList.add("active") : this.linkSchedule.classList.remove("active");
+    if(window.location.pathname === "/recipes.html") {this.linkRecipes.classList.add("active")} else {this.linkRecipes.classList.remove("active")};
+    if(window.location.pathname === "/app.html") {this.linkDashboard.classList.add("active")} else {this.linkDashboard.classList.remove("active")};
+    if(window.location.pathname === "/schedules.html") {this.linkSchedule.classList.add("active")} else {this.linkSchedule.classList.remove("active")};
+    console.log(window.location.pathname);
+
   }
   istItLogged() {
     if (localStorage.getItem("newName") != null) {
