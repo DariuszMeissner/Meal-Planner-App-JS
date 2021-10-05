@@ -5,7 +5,7 @@ Scrum project during workshop from 12.09-24.09, which I continue to develop.
 
 ## Features did during SCRUM project
 - landing page
-- carousel
+- landing page: carousel changing on time or click
 - app: adding and rendering your name
 - app: header,nav and dashboard section 
 
@@ -24,9 +24,6 @@ Scrum project during workshop from 12.09-24.09, which I continue to develop.
 - validation of forms based on empty fields
 - RWD 
 
-## Features - Landing page
-- carousel changing on time or click
-- RWD
 
 ### What next?
 - improvement display table on small screen
