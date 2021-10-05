@@ -3,8 +3,13 @@ Application and landing page for planning meals.
 
 Scrum project during workshop from 12.09-24.09, which I continue to develop.
 
+## Features did during SCRUM project
+- landing page
+- carousel
+- app: adding and rendering your name
+- app: header,nav and dashboard section 
 
-## Feature - APP
+## Features - APP
 - all displaying and saving data based on webstorage api
 - adding and saving Plans and Recipes
 - planning schedules based on recipes added earlier
@@ -19,7 +24,7 @@ Scrum project during workshop from 12.09-24.09, which I continue to develop.
 - validation of forms based on empty fields
 - RWD 
 
-## Feature - Landing page
+## Features - Landing page
 - carousel changing on time or click
 - RWD
 
