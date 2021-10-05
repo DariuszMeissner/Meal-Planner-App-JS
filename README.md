@@ -9,7 +9,7 @@ Scrum project during workshop from 12.09-24.09, which I continue to develop.
 - app: adding and rendering your name
 - app: header,nav and dashboard section 
 
-## Features - APP
+## Features - APP - continuation of development
 - all displaying and saving data based on webstorage api
 - adding and saving Plans and Recipes
 - planning schedules based on recipes added earlier
