@@ -30,8 +30,8 @@ Scrum project during workshop from 12.09-24.09, which I continue to develop.
 - adding validation like numbers of words, type of field
 - improvement form fields
 
-#### demo App https://dariuszmeissner.github.io/Scrum-Meal-Planner-App-JS/app.html
-#### demo Landing page https://dariuszmeissner.github.io/Scrum-Meal-Planner-App-JS/index.html
+#### demo App https://dariuszmeissner.github.io/Meal-Planner-App-JS/app.html
+#### demo Landing page https://dariuszmeissner.github.io/Meal-Planner-App-JS/
 
 
 
