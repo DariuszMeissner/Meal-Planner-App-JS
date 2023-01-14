@@ -1,0 +1,21 @@
+/**
+* Basic Styling of inputs
+*
+* */
+input[type='text'] {
+    padding: .4rem  $space-s;
+    border: 2px solid transparent;
+    &:focus{
+        transition: 0.5;
+        border: 2px solid $color-buttons-headerScreen;
+    }
+}
+// div with contenteditable - add recipe and add schedule 
+.input__step {
+    display: inline-block;
+    padding: $space-xs;
+    background-color: $color-zaplanuj;
+    border: 1px solid $color-row-text;
+    font-weight: $medium;
+    font-size: $font-size-sm;
+}

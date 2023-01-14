@@ -1,0 +1,47 @@
+.author {
+  background-color: #fff;
+  &__container {
+    padding: $space-md;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      padding: $space-md;
+    }
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: $space-s 0;
+    &--image {
+      align-items: flex-start;
+    }
+    &--right {
+      align-items: center;
+      @include tablet {
+        align-items: flex-start;
+      }
+    }
+  }
+  &__heading {
+    font-size: $font-size-h3;
+    padding-bottom: $space-lg;
+    font-weight: $medium;
+  }
+  &__images {
+    width: 12rem;
+    @include laptop {
+      width: 20rem;
+    }
+  }
+  &__title {
+    font-size: $font-size-h3;
+    margin: $space-md 0;
+    line-height: $space-s;
+  }
+  &__text {
+    text-align: justify;
+  }
+}

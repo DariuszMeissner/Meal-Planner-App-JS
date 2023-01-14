@@ -1,0 +1,52 @@
+.feature {
+  background-color: #fff;
+  &__container {
+    padding: $space-sm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      padding: $space-md;
+    }
+    @include laptop {
+
+    }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $space-md $space-md;
+    @include tablet {
+      &--best {
+        padding-right: $space-lg*2;
+        padding-left: 0;
+      }
+      &--extra {
+        padding-left: $space-lg*2;
+        padding-right: 0;
+      }
+    }
+  }
+  &__heading {
+    font-size: $font-size-h3;
+    padding-bottom: $space-lg;
+    font-weight: $medium;
+  }
+  &__title {
+    font-weight: $medium;
+    font-size: $font-size-subtitle;
+    margin-bottom: $space-s;
+    text-align: center;
+  }
+  &__text {
+    text-align: center;
+    line-height: $space-m;
+  }
+  &__icon {
+    font-size: $font-size-h1;
+    margin-bottom: $space-md;
+    color: $color-row-text;
+  }
+}

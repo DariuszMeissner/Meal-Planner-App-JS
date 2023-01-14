@@ -1,0 +1,114 @@
+.footer {
+  background-color: $color-sidePanel_nav;
+  color: $color-text-secondary;
+  &__container {
+    padding: $space-md;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $space-md $space-lg;
+    text-align: center;
+    @include laptop {
+      text-align: left;
+      padding: $space-sm;
+      align-items: space-betwee;
+    }
+
+    &--list {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      @include tablet {
+        justify-content: center;
+      }
+    }
+    &--short {
+      @include tablet {
+        padding: 0 $space-xxl;
+      }
+      @include laptop {
+        padding: 0 0;
+      }
+    }
+    &--social {
+      @include laptop {
+        padding: 0 0;
+        align-items: flex-end;
+      }
+    }
+    &--input {
+      display: flex;
+      padding: 0;
+      @include tablet {
+        justify-content: center;
+      }
+      @include laptop {
+        margin-bottom: $space-sm;
+      }
+    }
+  }
+  &__title {
+    font-size: 20px;
+    margin-bottom: $space-sm;
+    @include laptop {
+      align-self: flex-start;
+      &--center {
+        align-self: center;
+      }
+      &--right {
+        align-self: flex-end;
+      }
+    }
+  }
+  &__list {
+    list-style: disc inside;
+    &--line {
+      margin: $space-xs 0;
+    }
+  }
+  &__bar {
+    margin-bottom: $space-s;
+    @include laptop {
+      margin-bottom: 0;
+
+    }
+  }
+  &__btn {
+    margin-bottom: $space-s;
+    @include laptop {
+      margin-bottom: 0;
+
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-s 0;
+    background-color: $color-header-col-text;
+  }
+}
+.social__icon {
+  font-size: $font-size-h3;
+  padding: 0 $space-s;
+  &:nth-child(1) {
+    padding-left: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $color-row-text;
+  }
+}
+.copyright {
+  &__text {
+    color: $color-text-secondary;
+  }
+}
+.copyright__link {
+  color: $color-jedzonko;
+  padding-left: $space-xs;
+}
