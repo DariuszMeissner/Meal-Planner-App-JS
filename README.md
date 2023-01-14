@@ -1,35 +1,27 @@
 # Meal-Planner-App
 Application and landing page for planning meals.
-
 Scrum project during workshop from 12.09-24.09, which I continue to develop.
 
-#### demo App https://dariuszmeissner.github.io/Meal-Planner-App-JS/app.html
-#### demo Landing page https://dariuszmeissner.github.io/Meal-Planner-App-JS/
+#### Demo 
+Landing page https://dariuszmeissner.github.io/Meal-Planner-App-JS/ </br>
+App https://dariuszmeissner.github.io/Meal-Planner-App-JS/app.html
+
 
 ![meal-planner2](https://user-images.githubusercontent.com/59477908/212501692-41fe00c4-2aeb-43f1-a47e-f28240ddff7c.png)
 ![meal-planner1](https://user-images.githubusercontent.com/59477908/212501689-aa5b2656-a34d-4e6f-827d-510d23c31b39.png)
 
-## Features did during SCRUM project
-- landing page
-- landing page: carousel changing on time or click
-- app: adding and rendering your name
-- app: header,nav and dashboard section 
-
-## Features - APP - continuation of development
-- all displaying and saving data based on webstorage api
-- adding and saving Plans and Recipes
-- planning schedules based on recipes added earlier
-- dashboard: switching schedules between current and the rest of it
-- dashboard: displaying current or closest schedules based on current week of year
-- dashboard: displaying current week of year
+## Features
+- landing page,
+- application dashboard
+- user login by Web Storage Api,
+- saving recipes and schedules in Web Storage Api,
+- hamburger menu,
+- dashboard to planning meals,
+- adding and saving plans and recipes,
+- planning schedules based on recipes added earlier,
+- dashboard: displaying current or closest schedules based on current week of year,
+- rendering list of recipes and schedules,
 - removing instruction or ingredient during adding new recipes
-- rendering list of Recipes
-- rendering list of schedules
-- displaying notifications about number of plans and recipes
-- adding and rendering your name
-- validation of forms based on empty fields
-- RWD 
-
 
 
 
