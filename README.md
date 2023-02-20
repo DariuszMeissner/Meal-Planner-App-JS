@@ -1,4 +1,4 @@
-# Meal-Planner-App
+# Meal-Planner
 Application and landing page for planning meals.
 Scrum project during workshop from 12.09-24.09, which I continue to develop.
 
